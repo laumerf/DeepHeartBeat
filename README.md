@@ -14,10 +14,12 @@ We provide the pre-trained TensorFlow models used in the experiments of our pape
 The models can be loaded in the following way:
 
 ```
-# EchoNet-Dynmaic
+from utils import *
 
+# EchoNet-Dynmaic
+model = load_echonet_dynamic_model(i) # with i in [0, 1, 2, 3, 4]
 
 # PhysioNet
-
+model = load_physionet_model()
 ```
 

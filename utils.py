@@ -3,7 +3,13 @@ import os
 import pandas as pd
 import scipy.io
 import skvideo.io
+import tensorflow as tf
 
+from models.echo import EchocardioModel
+from models.ecg import ECGModel
+
+
+# data loaders
 
 def load_data_echonet():
 
@@ -58,3 +64,29 @@ def get_physionet_data():
                     'frequency': 300
                 }
     return data
+
+
+# TensorFlow model loaders
+
+def load_echonet_dynamic_model(split):
+
+    # initialise model
+    weights_path = './trained_models/echonet_dynamic_' + str(split)
+    model = EchocardioModel(latent_space_dim=128, batch_size=32, hidden_dim=128)
+    model((tf.ragged.constant([[0.0]], dtype='float32'), tf.ragged.constant([[np.full((112, 112), 0.5)]], inner_shape=(112, 112))))
+
+    # load weights
+    model.load_weights(weights_path)
+
+    return model
+
+def load_physionet_ecg_model():
+
+    weights_path = './trained_models/physionet'
+    model = ECGModel(latent_space_dim=8, batch_size=64, hidden_dim=128, learning_rate=2e-4)
+    model((tf.ragged.constant([[0.0]], dtype='float32'), tf.ragged.constant([[0.0]], dtype='float32')))
+
+    # load weights
+    model.load_weights(weights_path)
+
+    return model
