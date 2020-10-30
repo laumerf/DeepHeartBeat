@@ -63,7 +63,7 @@ print('')
 print('RNMF heart rate comparison')
 print('--------------------------')
 
-rnmf_results = pd.read_csv('./results/rnmf_heart_rates_echonet.csv', index_col=0)
+rnmf_results = pd.read_csv('./data/rnmf_heart_rates_echonet.csv', index_col=0)
 ids = rnmf_results.index.values
 
 for i, model_results in enumerate(results):
