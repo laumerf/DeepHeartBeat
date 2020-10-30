@@ -1,4 +1,3 @@
-import cv2 as cv
 import numpy as np
 from sklearn.model_selection import KFold
 
@@ -14,7 +13,7 @@ echonet_train_ids = data_info[data_info.Split == 'TRAIN'].index.values
 echonet_val_ids = data_info[data_info.Split == 'VAL'].index.values
 ids = list(echonet_train_ids) + list(echonet_val_ids)
 
-# Train 5 two chamber models
+# 5-fold CV training -> 5 models
 files = np.array([files[id] for id in ids])
 kf = KFold(n_splits=5, shuffle=True, random_state=230)
 for i, (train_index, val_index) in enumerate(kf.split(files)):
