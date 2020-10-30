@@ -73,10 +73,10 @@ def load_echonet_dynamic_model(split):
     # initialise model
     weights_path = './trained_models/echonet_dynamic_' + str(split)
     model = EchocardioModel(latent_space_dim=128, batch_size=32, hidden_dim=128)
-    model((tf.ragged.constant([[0.0]], dtype='float32'), tf.ragged.constant([[np.full((112, 112), 0.5)]], inner_shape=(112, 112))))
+    model((tf.ragged.constant([[0.0]], dtype='float32'), tf.ragged.constant([[np.full((112, 112), 0.5)]], inner_shape=(112, 112), dtype='float32')))
 
     # load weights
-    model.load_weights(weights_path)
+    model.load_weights(weights_path).expect_partial()
 
     return model
 
@@ -87,6 +87,6 @@ def load_physionet_ecg_model():
     model((tf.ragged.constant([[0.0]], dtype='float32'), tf.ragged.constant([[0.0]], dtype='float32')))
 
     # load weights
-    model.load_weights(weights_path)
+    model.load_weights(weights_path).expect_partial()
 
     return model
