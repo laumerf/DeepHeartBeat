@@ -1,4 +1,5 @@
 # DeepHeartBeat
+![The deep heart beat model architecture](deepheartbeat.png)
 by Fabian Laumer, Gabriel Fringeli, Alina Dubatovka, Laura Manduchi, Joachim M. Buhmann
 
 ## Introduction
