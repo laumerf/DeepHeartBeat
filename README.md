@@ -49,3 +49,6 @@ For example to trun the Echo evaluation you may invoke
 $ python run.py eval_echo
 ```
 
+### When using this code, please cite
+@article{}
+
