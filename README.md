@@ -40,6 +40,7 @@ The project contains the following experiments:
 ### Single Lead ECG
 
 - `experiments/train_ecg.py`: Fits a single DeepHeartBeat model to the PhysioNet single lead ECG dataset and saves the model weights in `trained_models/`.
+- `experiments/eval_ecg.py`: Evaluation of the DeepHeartBeat model trained in `experiments/train_ecg.py`. This includes anomaly detection (noise detection) and atrial fibrillation (AF) detection.
 
 ### Usage
 
