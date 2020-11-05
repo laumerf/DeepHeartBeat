@@ -41,6 +41,8 @@ The project contains the following experiments:
 
 - `experiments/train_ecg.py`: Fits a single DeepHeartBeat model to the PhysioNet single lead ECG dataset and saves the model weights in `trained_models/`.
 
+### Usage
+
 To run any of the experiments you can use the following command:
 ```
 $ python run.py [EXPERIMENT NAME]
