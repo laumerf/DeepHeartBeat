@@ -6,7 +6,7 @@ from models.ecg import ECGModel
 
 
 # Load Physionet ECG data
-data = get_physionet_data()
+_, data = get_physionet_data()
 print('%i subjects loaded' % len(data))
 
 # Train-validation split
