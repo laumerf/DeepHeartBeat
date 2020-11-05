@@ -1,3 +1,4 @@
+import csv
 import numpy as np
 import os
 import pandas as pd
@@ -50,20 +51,39 @@ def load_data_echonet():
 
     return data_info, files
 
-def get_physionet_data():
+def get_physionet_data(split='training'):
 
-    data_path = 'data/physionet.org/files/challenge-2017/1.0.0/training/'
+    # load label file
+    data_path = f'data/physionet.org/files/challenge-2017/1.0.0/{split}/'
+    if split == 'training':
+        label_file_path = 'data/physionet.org/files/challenge-2017/1.0.0/training/REFERENCE-v3.csv'
+    elif split == 'validation':
+        label_file_path = 'data/physionet.org/files/challenge-2017/1.0.0/validation/REFERENCE.csv'
+    
+    with open(label_file_path, newline='') as label_csv_file:
+        csv_reader = csv.reader(label_csv_file, delimiter=',')
+        labels = {record_id: label for record_id, label in csv_reader}
 
+    # load measurements
     data = dict()
-    for i in range(9):
-        for filename in os.listdir(data_path + 'A0' + str(i)):
+    if split == 'training':
+        for i in range(9):
+            for filename in os.listdir(data_path + 'A0' + str(i)):
+                if filename.endswith('.mat'):
+                    mat_data = scipy.io.loadmat(data_path + 'A0' + str(i) + '/' + filename)
+                    data[filename[:-4]] = {
+                        'measurements': mat_data['val'][0],
+                        'frequency': 300
+                    }
+    elif split == 'validation':
+        for filename in os.listdir(data_path):
             if filename.endswith('.mat'):
-                mat_data = scipy.io.loadmat(data_path + 'A0' + str(i) + '/' + filename)
-                data['A0' + str(i) + '/' + filename[:-4]] = {
+                mat_data = scipy.io.loadmat(data_path + filename)
+                data[filename[:-4]] = {
                     'measurements': mat_data['val'][0],
                     'frequency': 300
                 }
-    return data
+    return labels, data
 
 
 # TensorFlow model loaders
