@@ -54,5 +54,19 @@ $ python run.py eval_echo
 ```
 
 ## When using this code, please cite
-@article{}
+@InProceedings{pmlr-v136-laumer20a,
+  title = 	 {DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds},
+  author =       {Laumer, Fabian and Fringeli, Gabriel and Dubatovka, Alina and Manduchi, Laura and Buhmann, Joachim M.},
+  booktitle = 	 {Proceedings of the Machine Learning for Health NeurIPS Workshop},
+  pages = 	 {194--212},
+  year = 	 {2020},
+  editor = 	 {Emily Alsentzer and Matthew B. A. McDermott and Fabian Falck and Suproteem K. Sarkar and Subhrajit Roy and Stephanie L. Hyland},
+  volume = 	 {136},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {11 Dec},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v136/laumer20a/laumer20a.pdf},
+  url = 	 {http://proceedings.mlr.press/v136/laumer20a.html},
+  abstract = 	 {Echocardiography monitors the heart movement for noninvasive diagnosis of heart diseases. It proves to be of profound practical importance as it combines low-cost portable instrumentation and rapid image acquisition without the risks of ionizing radiation. However, echocardiograms produce high-dimensional, noisy data which frequently proved difficult to interpret. As a solution, we propose a novel autoencoder-based framework, DeepHeartBeat, to learn human interpretable representations of cardiac cycles from cardiac ultrasound data. Our model encodes high dimensional observations by a cyclic trajectory in a lower dimensional space. We show that the learned parameters describing the latent trajectory are well interpretable and we demonstrate the versatility of our model by successfully applying it to various cardiologically relevant tasks, such as ejection fraction prediction and arrhythmia detection. As a result, DeepHeartBeat promises to serve as a valuable assistant tool for automating therapy decisions and guiding clinical care.}
+}
 
