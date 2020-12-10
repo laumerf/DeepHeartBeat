@@ -53,7 +53,7 @@ For example to trun the Echo evaluation you may invoke
 $ python run.py eval_echo
 ```
 
-## When using this code, please cite
+__When using this code, please cite__
 @InProceedings{pmlr-v136-laumer20a,
   title = 	 {DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds},
   author =       {Laumer, Fabian and Fringeli, Gabriel and Dubatovka, Alina and Manduchi, Laura and Buhmann, Joachim M.},
