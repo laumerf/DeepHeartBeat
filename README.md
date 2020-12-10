@@ -3,7 +3,7 @@
 by Fabian Laumer, Gabriel Fringeli, Alina Dubatovka, Laura Manduchi, Joachim M. Buhmann
 
 ## Introduction
-This repository contains the accompanying code to our paper __DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds__, which presents a novel autoencoder-based framework for learning human interpretable representations of cardiac cycles from cardiac ultrasound data.
+This repository contains the accompanying code to our paper [__DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds__](http://proceedings.mlr.press/v136/laumer20a.html), which presents a novel autoencoder-based framework for learning human interpretable representations of cardiac cycles from cardiac ultrasound data.
 
 ## Available models
 
@@ -67,5 +67,6 @@ $ python run.py eval_echo
   publisher =    {PMLR},
   pdf = 	 {http://proceedings.mlr.press/v136/laumer20a/laumer20a.pdf},
   url = 	 {http://proceedings.mlr.press/v136/laumer20a.html}
+  
 }
 
