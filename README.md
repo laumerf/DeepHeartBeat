@@ -67,7 +67,7 @@ __When using this code, please cite:__
   series = 	 {Proceedings of Machine Learning Research},<br/>
   month = 	 {11 Dec},<br/>
   publisher =    {PMLR},<br/>
-  pdf = 	 {http://proceedings.mlr.press/v136/laumer20a/laumer20a.pdf},<br/>
-  url = 	 {http://proceedings.mlr.press/v136/laumer20a.html}<br/>
+  pdf = 	 {http://proceedings.mlr.press/v136/laumer20a/laumer20a.pdf },<br/>
+  url = 	 {http://proceedings.mlr.press/v136/laumer20a.html }<br/>
 }
 
