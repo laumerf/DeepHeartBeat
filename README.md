@@ -57,17 +57,17 @@ $ python run.py eval_echo
 __When using this code, please cite:__
 
 @InProceedings{pmlr-v136-laumer20a,<br/>
-  title = 	 {DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds},<br/>
-  author =       {Laumer, Fabian and Fringeli, Gabriel and Dubatovka, Alina and Manduchi, Laura and Buhmann, Joachim M.},<br/>
-  booktitle = 	 {Proceedings of the Machine Learning for Health NeurIPS Workshop},<br/>
-  pages = 	 {194--212},<br/>
-  year = 	 {2020},<br/>
-  editor = 	 {Emily Alsentzer and Matthew B. A. McDermott and Fabian Falck and Suproteem K. Sarkar and Subhrajit Roy and Stephanie L. Hyland},<br/>
-  volume = 	 {136},<br/>
-  series = 	 {Proceedings of Machine Learning Research},<br/>
-  month = 	 {11 Dec},<br/>
-  publisher =    {PMLR},<br/>
-  pdf = 	 {http://proceedings.mlr.press/v136/laumer20a/laumer20a.pdf },<br/>
-  url = 	 {http://proceedings.mlr.press/v136/laumer20a.html }<br/>
+  title = 	 "DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds",<br/>
+  author =       "Laumer, Fabian and Fringeli, Gabriel and Dubatovka, Alina and Manduchi, Laura and Buhmann, Joachim M.",<br/>
+  booktitle = 	 "Proceedings of the Machine Learning for Health NeurIPS Workshop",<br/>
+  pages = 	 "194--212",<br/>
+  year = 	 "2020",<br/>
+  editor = 	 "Emily Alsentzer and Matthew B. A. McDermott and Fabian Falck and Suproteem K. Sarkar and Subhrajit Roy and Stephanie L. Hyland",<br/>
+  volume = 	 "136",<br/>
+  series = 	 "Proceedings of Machine Learning Research",<br/>
+  month = 	 "11 Dec",<br/>
+  publisher =    "PMLR",<br/>
+  pdf = 	 "http://proceedings.mlr.press/v136/laumer20a/laumer20a.pdf",<br/>
+  url = 	 "http://proceedings.mlr.press/v136/laumer20a.html"<br/>
 }
 
