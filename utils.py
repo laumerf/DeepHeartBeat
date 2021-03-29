@@ -6,8 +6,8 @@ import scipy.io
 import skvideo.io
 import tensorflow as tf
 
-from models.echo import EchocardioModel
-from models.ecg import ECGModel
+from models.echo import *
+from models.ecg import *
 
 
 # data loaders
