@@ -54,7 +54,7 @@ $ python run.py eval_echo
 ```
 
 
-__When using this code, please cite:__
+__If you think this code was helpful to you, please consider citing:__
 
 @InProceedings{pmlr-v136-laumer20a,<br/>
   title = 	 "DeepHeartBeat: Latent trajectory learning of cardiac cycles using cardiac ultrasounds",<br/>
